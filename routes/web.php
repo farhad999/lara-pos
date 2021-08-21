@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,5 +29,9 @@ Route::middleware('auth')->group(function (){
 
     //logout
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+    //categories
+
+    Route::resource('/categories', CategoryController::class);
 
 });

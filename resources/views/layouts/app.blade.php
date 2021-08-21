@@ -46,6 +46,8 @@
         }
     });
 
+    $('ul').Treeview();
+
 </script>
 
 @yield('scripts')

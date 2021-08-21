@@ -9,7 +9,7 @@
 
         <!-- Sidebar Menu -->
         <nav class="mt-2">
-            <ul class="nav nav-pills nav-sidebar flex-column">
+            <ul id="sidebar-menu" class="nav nav-pills nav-sidebar flex-column" data-widget="treeview">
                 <li class="nav-item">
                     <a href="{{route('home')}}"
                        class="nav-link {{ request()->is('/') ? 'active': ''}}">
@@ -20,8 +20,31 @@
                     </a>
                 </li>
 
+                <!-- Category -->
+
+                <li class="nav-item has-treeview {{(request()->segment('1') == 'categories') ? 'menu-open': ''}}">
+                    <a href="#ddd" class="nav-link">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            Products
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('categories.index')}}" class="nav-link {{request()->segment('1') == 'categories' ? 'active': ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Categories</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
             </ul>
         </nav>
+
+
+
         <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
