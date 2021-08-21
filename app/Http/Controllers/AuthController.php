@@ -28,5 +28,12 @@ class AuthController extends Controller
     function loginPage()
     {
         return view('auth.login');
+    }
+
+    function logout()
+    {
+        auth()->logout();
+        return redirect()->route('login');
+    }
 
 }
