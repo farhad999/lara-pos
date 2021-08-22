@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,5 +34,9 @@ Route::middleware('auth')->group(function (){
     //categories
 
     Route::resource('/categories', CategoryController::class);
+
+    //brands
+
+    Route::resource('/brands', BrandController::class);
 
 });
