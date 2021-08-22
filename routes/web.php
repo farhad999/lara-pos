@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\UnitController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -38,5 +39,9 @@ Route::middleware('auth')->group(function (){
     //brands
 
     Route::resource('/brands', BrandController::class);
+
+    //units
+
+    Route::resource('/units', UnitController::class);
 
 });

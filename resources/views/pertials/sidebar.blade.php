@@ -22,7 +22,7 @@
 
                 <!-- Category -->
 
-                <li class="nav-item has-treeview {{(request()->segment('1') == 'categories' || request()->segment('1') == 'brands') ? 'menu-open': ''}}">
+                <li class="nav-item has-treeview {{(request()->segment('1') == 'categories' || request()->segment('1') == 'brands' || request()->segment('1') == 'units') ? 'menu-open': ''}}">
                     <a href="#ddd" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
@@ -41,6 +41,12 @@
                             <a href="{{route('categories.index')}}" class="nav-link {{request()->segment('1') == 'categories' ? 'active': ''}}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Categories</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('units.index')}}" class="nav-link {{request()->segment('1') == 'units' ? 'active': ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Units</p>
                             </a>
                         </li>
                     </ul>
