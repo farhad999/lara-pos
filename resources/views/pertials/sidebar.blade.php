@@ -60,6 +60,35 @@
                     </ul>
                 </li>
 
+                <!-- Contacts -->
+
+                <li class="nav-item has-treeview {{(request()->segment('1') == 'contacts') ? 'menu-open': ''}} ">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            Contacts
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+
+                        <li class="nav-item">
+                            <a href="{{route('contacts.index', ['type' =>'customer'])}}" class="nav-link {{ (request()->segment('1') == 'contacts' && request()->query('type') == 'customer') ? 'active': ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Customers</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{route('contacts.index', ['type' =>'supplier'])}}" class="nav-link {{ (request()->segment('1') == 'contacts' && request()->query('type') == 'supplier') ? 'active': ''}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Suppliers</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
             </ul>
         </nav>
 

@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UnitController;
 use Illuminate\Support\Facades\Route;
@@ -48,5 +49,9 @@ Route::middleware('auth')->group(function (){
     //products
 
     Route::resource('/products', ProductController::class);
+
+    //Contacts = supplier and customer
+
+    Route::resource('/contacts', ContactController::class);
 
 });
